@@ -1,4 +1,4 @@
-package com.example.videoshort.view;
+package com.example.videoshort.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
