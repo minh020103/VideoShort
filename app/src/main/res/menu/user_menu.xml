@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  
+    <item android:id="@+id/navHome" android:icon="@drawable/home_seletor" android:title="Trang chủ"/>
+    <item android:id="@+id/navShop" android:icon="@drawable/shop_seletor" android:title="Cửa hàng"/>
+    <item android:id="@+id/navAddVideo" android:icon="@drawable/icon_add_video" android:title=""/>
+    <item android:id="@+id/navMessage" android:icon="@drawable/message_seletor" android:title="Hộp thư"/>
+    <item android:id="@+id/navProfile" android:icon="@drawable/profile_seletor" android:title="Hồ sơ"/>
+
 </menu>
