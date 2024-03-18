@@ -1,8 +1,10 @@
-package com.example.videoshort;
+package com.example.videoshort.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.videoshort.R;
 
 public class MainActivity extends AppCompatActivity {
 
