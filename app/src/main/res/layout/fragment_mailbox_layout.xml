@@ -1,14 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.HomeFragment">
+    tools:context=".view.fragment.app.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+
+    <ImageView
+        android:id="@+id/imgNull"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_plus"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:id="@+id/idMore"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_search"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="10dp"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Trang chủ"
-        android:gravity="center"/>
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hộp thư"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/idMore"
+        app:layout_constraintStart_toEndOf="@+id/imgNull"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvListFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5in"/>
+                <LinearLayout
+                    android:id="@+id/llHoatDong"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5in"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0.5in"
+                        android:layout_height="0.5in"
+                        android:src="@drawable/icon_notification_active"
+                        app:tint="@color/pink"
+                        android:padding="5dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hoạt động"
+                                android:textColor="@color/text_gray"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Adc đã trả lời bình luận của bạn"
+                                android:textColor="@color/text_gray" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/circle_red_notification_selector"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout"
+                            android:layout_marginRight="10dp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llThongBao"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5in"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0.5in"
+                        android:layout_height="0.5in"
+                        android:src="@drawable/icon_notification_system"
+                        app:tint="@color/purple_blue_bold"
+                        android:padding="5dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Thông báo hệ thống"
+                                android:textColor="@color/text_gray"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Adc đã trả lời bình luận của bạn"
+                                android:textColor="@color/text_gray" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/circle_red_notification_selector"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout1"
+                            android:layout_marginRight="10dp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llThongBaoShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5in"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0.5in"
+                        android:layout_height="0.5in"
+                        android:src="@drawable/icon_notification_shop"
+                        app:tint="@color/orange"
+                        android:padding="5dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="VideoShort shop"
+                                android:textColor="@color/text_gray"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Adc đã trả lời bình luận của bạn"
+                                android:textColor="@color/text_gray" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/circle_red_notification_selector"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                            android:layout_marginRight="10dp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

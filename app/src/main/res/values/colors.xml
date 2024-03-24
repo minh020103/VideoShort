@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="main_color">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="main_color_dark">#FF000000</color>
+    <color name="main_color_light">#FFFFFFFF</color>
     <color name="icon_selected_false">#c0c0c0</color>
+    <color name="text_gray">#494646</color>
+    <color name="gray">#C6C6C6</color>
+    <color name="not_color">#00000000</color>
+    <color name="black_a_5">#80000000</color>
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FFEC41</color>
+    <color name="pink">#fe3b75</color>
+    <color name="purple_blue_bold">#0a0f35</color>
+    <color name="orange">#ff9d26</color>
 </resources>

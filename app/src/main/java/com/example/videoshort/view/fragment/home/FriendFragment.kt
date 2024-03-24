@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.videoshort.R
 
-class ForYouFragment : Fragment() {
+class FriendFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_for_you_layout, container, false)
+        return inflater.inflate(R.layout.fragment_friend_layout, container, false)
     }
 }

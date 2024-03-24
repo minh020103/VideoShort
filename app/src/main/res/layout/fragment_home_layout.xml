@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.HomeFragment">
+    android:orientation="vertical"
+    android:background="@color/main_color_dark">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2Home"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/background_tab_video">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/not_color"
+            app:tabTextColor="@color/gray"
+            app:tabSelectedTextColor="@color/main_color_light"
+            app:tabIndicatorColor="@color/main_color_light"/>
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_search"
+            app:tint="@color/main_color_light"
+            android:padding="10dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
 
-</FrameLayout>
+
+
+</RelativeLayout>

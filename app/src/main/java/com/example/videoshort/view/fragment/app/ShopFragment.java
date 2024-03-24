@@ -1,4 +1,4 @@
-package com.example.videoshort.view.fragment;
+package com.example.videoshort.view.fragment.app;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

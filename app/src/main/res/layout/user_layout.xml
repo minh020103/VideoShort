@@ -8,17 +8,21 @@
     tools:context=".view.activity.UserActivity">
 
     <LinearLayout
+        android:id="@+id/idUserFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnvUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/main_color_dark"
         app:itemIconTint="@drawable/menu_color_selector"
         app:itemTextColor="@drawable/menu_color_selector"
-        android:background="@color/main_color"
-        app:menu="@menu/user_menu"/>
+        style="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface"
+        app:menu="@menu/user_menu" />
 </LinearLayout>
